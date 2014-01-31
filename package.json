@@ -1,0 +1,51 @@
+{
+  "name": "speech-api",
+  "version": "0.0.0",
+  "description": "speech api ",
+  "scripts": {
+    "postinstall": "grunt bower; grunt sass:dist; "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ServiceMesh/speech-api.git"
+  },
+  "author": "Agility Labs",
+  "license": "private",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-connect": "~0.5.0",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-angular-templates": "~0.4.7",
+    "grunt-contrib-uglify": "~0.2.5",
+    "grunt-bower-task": "~0.3.4",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-cssmin": "~0.6.2",
+    "karma-script-launcher": "~0.1.0",
+    "karma-chrome-launcher": "~0.1.0",
+    "karma-firefox-launcher": "~0.1.0",
+    "karma-html2js-preprocessor": "~0.1.0",
+    "karma-jasmine": "~0.1.3",
+    "karma-requirejs": "~0.1.0",
+    "karma-coffee-preprocessor": "~0.1.0",
+    "karma-phantomjs-launcher": "~0.1.0",
+    "karma": "~0.10.4",
+    "grunt-karma": "~0.6.2",
+    "grunt-contrib-watch": "~0.5.3",
+    "karma-coverage": "~0.1.0",
+    "grunt-open": "~0.2.2",
+    "grunt-contrib-requirejs": "~0.4.1",
+    "karma-junit-reporter": "~0.1.0",
+    "grunt-confidence": "0.0.2",
+    "grunt-retire": "~0.1.14",
+    "grunt-contrib-yuidoc": "~0.5.0",
+    "grunt-exec": "~0.4.2",
+    "grunt-concurrent": "~0.4.1",
+    "node-bourbon": "~1.0.0",
+    "node-neat": "~1.0.0",
+    "grunt-sass": "~0.8.0",
+    "grunt-i18n": "~0.3.0",
+    "grunt-install-dependencies": "~0.1.0",
+    "deepmerge": "~0.2.7"
+  }
+}

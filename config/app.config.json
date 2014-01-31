@@ -1,0 +1,28 @@
+{
+	"html5Routing": {
+		"$filter": "env",
+		"production": {
+			"$value": true
+		},
+		"nonproduction": {
+			"$value": false
+		},
+		"$default": false
+	},
+	"urlPrefix": {
+		"$filter": "env",
+		"production": {
+			"$value": ""
+		},
+		"nonproduction": {
+			"$value": "#"
+		},
+		"$default": "#"
+	},
+	"navigation": [
+		{
+            "label": "Home",
+            "path": ""
+        }
+	]
+}

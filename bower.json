@@ -1,0 +1,77 @@
+{
+  "name": "speech-api",
+  "version": "0.0.0",
+  "homepage": "",
+  "authors": [],
+  "license": "All Rights Reserved",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "spec"
+  ],
+  "main": [
+    "exports/app.js",
+    "exports/app.min.js"
+  ],
+  "dependencies": {
+    "JSFSM": "~2.2.0",
+    "angular-animate": "1.2.6",
+    "angular-bootstrap": "~0.6.0",
+    "sass-bootstrap": "~3.0.2",
+    "angular-route": "1.2.6",
+    "angular-cookies": "1.2.6",
+    "requirejs": "~2.1.9",
+    "json3": "~3.2.5",
+    "es5-shim": "~2.1.0",
+    "angular": "1.2.6",
+    "lodash": "git://github.com/lodash/lodash.git"
+  },
+  "devDependencies": {
+    "code.angularjs.org": "git://github.com/angular/code.angularjs.org",
+    "angular-mocks": "1.2.6",
+    "sinon.js": "git://github.com/will-ob/sinon.js#v1.7.3",
+    "jasmine-sinon": "git://github.com/froots/jasmine-sinon#7a14027b49e3291c24c3769e51291e073c534cc4",
+    "jasmine-matchers": "git://github.com/JamieMason/Jasmine-Matchers"
+  },
+  "exportsOverride": {
+    "jasmine-matchers": {
+      "js": "dist/jasmine-matchers.js"
+    },
+    "angular-ui": {
+      "js": "build/angular-ui.js"
+    },
+    "es5-shim": {
+      "js": [
+        "es5-shim.js",
+        "es5-sham.js"
+      ]
+    },
+    "sass-bootstrap": {
+      "scss": "lib/*.scss"
+    },
+    "JSFSM": {
+      "js": "state-machine.js"
+    },
+    "json3": {
+      "js": "lib/json3.js"
+    },
+    "requirejs": {
+      "js": [
+        "require.js"
+      ]
+    },
+    "code.angularjs.org": {
+      "js": [
+        "1.2.6/i18n/*.js"
+      ]
+    }
+  },
+  "resolutions": {
+    "angular": "1.2.6"
+  }
+}
+

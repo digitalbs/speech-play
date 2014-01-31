@@ -1,0 +1,87 @@
+{"baseUrl": {
+    "$filter": "target",
+    "testing": {
+        "$value": "/base/src"
+    },
+    "production": {
+        "$value": ""
+    },
+    "demo": {
+        "$value": ""
+    }
+}, "deps": {
+    "$filter": "target",
+    "testing": {
+        "$value": ["angular-mocks", "vendor/sinon.js/sinon", "vendor/jasmine-sinon/jasmine-sinon", "vendor/jasmine-matchers/js/jasmine-matchers", "vendor/lodash/lodash.compat", "angular-bootstrap", "angular-route"]
+    },
+    "production": {
+        "$value": ["angular", "angular-animate", "vendor/lodash/lodash.compat", "angular-bootstrap", "angular-route"]
+    },
+    "demo": {
+        "$value": ["angular", "angular-animate", "vendor/lodash/lodash.compat", "angular-bootstrap", "angular-route"]
+    }
+}, "paths": {
+    "$filter": "target",
+    "testing": {
+        "$value": {
+            "angular": "vendor/angular/angular",
+            "angular-cookies": "vendor/angular-cookies/angular-cookies",
+            "angular-mocks": "vendor/angular-mocks/angular-mocks",
+            "angular-resource": "vendor/angular-resource/angular-resource",
+            "angular-animate": "vendor/angular-animate/angular-animate",
+            "angular-bootstrap": "vendor/angular-bootstrap/ui-bootstrap-tpls",
+            "angular-route": "vendor/angular-route/angular-route"
+        }
+    },
+    "production": {
+        "$value": {
+            "angular": "vendor/angular/angular",
+            "angular-animate": "vendor/angular-animate/angular-animate",
+            "angular-bootstrap": "vendor/angular-bootstrap/ui-bootstrap-tpls",
+            "angular-route": "vendor/angular-route/angular-route"
+        }
+    },
+    "demo": {
+        "$value": {
+            "angular": "vendor/angular/angular",
+            "angular-animate": "vendor/angular-animate/angular-animate",
+            "angular-locale": "vendor/code.angularjs.org/js/angular-locale_en-us",
+            "angular-bootstrap": "vendor/angular-bootstrap/ui-bootstrap-tpls",
+            "angular-route": "vendor/angular-route/angular-route"
+        }
+    }
+}, "shim": {
+    "$filter": "target",
+    "testing": {
+        "$value": {
+            "angular": ["vendor/json3/js/json3", "vendor/es5-shim/js/es5-shim", "vendor/es5-shim/js/es5-sham"],
+            "angular-cookies": ["angular"],
+            "angular-mocks": ["angular"],
+            "angular-resource": ["angular"],
+            "vendor/es5-shim/js/es5-sham": ["vendor/es5-shim/js/es5-shim"],
+            "angular-animate": ["angular"],
+            "angular-bootstrap": ["angular"],
+            "angular-route": ["angular"]
+        }
+    },
+    "production": {
+        "$value": {
+            "angular": {
+                "deps": ["vendor/json3/js/json3", "vendor/es5-shim/js/es5-shim", "vendor/es5-shim/js/es5-sham"]
+            },
+            "angular-animate": ["angular"],
+            "angular-bootstrap": ["angular"],
+            "angular-route": ["angular"]
+        }
+    },
+    "demo": {
+        "$value": {
+            "angular": {
+                "deps": ["vendor/json3/js/json3", "vendor/es5-shim/js/es5-shim", "vendor/es5-shim/js/es5-sham"]
+            },
+            "angular-animate": ["angular"],
+            "angular-bootstrap": ["angular"],
+            "angular-route": ["angular"]
+        }
+    }
+}}

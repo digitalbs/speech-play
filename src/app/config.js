@@ -1,0 +1,1 @@
+define([], function () { var config = {"html5Routing":false,"urlPrefix":"#","navigation":[{"label":"Home","path":""}]} ; return config; });

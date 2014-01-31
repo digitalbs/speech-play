@@ -1,0 +1,8 @@
+{
+    "i18n": {
+        "angular_locale": "en-us",
+        "greeting": "Welcome",
+        "current_time": "Current Time",
+        "hello_world": "Hello, World"
+    }
+}
