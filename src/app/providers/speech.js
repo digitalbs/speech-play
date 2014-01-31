@@ -32,23 +32,24 @@ define([], function () {
                     final_transcript += result[0].transcript;
                 }
             }
-            sayIt(final_transcript);
+            final_transcript = final_transcript.replace(' ', '');
+
+            sayIt(command(final_transcript));
+
             final_transcript = '';
         }
 
         function sayIt(text) {
-            text = text.replace(' ', '');
             recognizing = true;
             var msg = new SpeechSynthesisUtterance();
             var voices = window.speechSynthesis.getVoices();
             msg.voice = voices[3];
-            //msg.voiceURI = 'native';
+            msg.voiceURI = 'native';
             msg.volume = 1;
             msg.rate = 1;
-            msg.pitch = 5;
-            msg.text = command(text);
+            msg.pitch = 1;
+            msg.text = text
             msg.lang = 'en-us';
-
 
             if(recognizing) {
                 speechSynthesis.speak(msg);

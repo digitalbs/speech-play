@@ -6,7 +6,7 @@ define(["app/config"], function (appConfig) {
      * @param $scope {Object} Angular Scope object tied to the speechApiCtrl Controller
      * @param $location {Object} Angular's version of window.location(parses url in address bar)
      */
-    function SpeechApiCtrl ($scope, $rootScope, speech) {
+    function SpeechApiCtrl ($scope, speech) {
         var spoken = false;
 
         $scope.appDisplayName = "Speech api";
@@ -22,27 +22,11 @@ define(["app/config"], function (appConfig) {
             speech.speak();
         }
 
-
-
-        $scope.$on('Speech_Result', function (evt, result) {
-
-            if(spoken) {
-                if(result === 'next') {
-                    speech.sayText('next step');
-                } else if (result === 'repeat') {
-                    speech.sayText('repeating step');
-                } else if (result === 'start over') {
-                    speech.sayText('starting over');
-                } else if (result === 'back') {
-                    speech.sayText('going back one step');
-                }
-            }
-
-
-        });
-
+        $scope.speak = function () {
+            speech.sayText($scope.msg);
+        }
     }
 
-    return ['$scope', '$rootScope', 'speech', SpeechApiCtrl];
+    return ['$scope', 'speech', SpeechApiCtrl];
 
 });

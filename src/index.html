@@ -14,13 +14,8 @@
 
 <body>
 <div class="container" ng-cloak>
-    <div class="header" ng-controller="SpeechApiNavCtrl">
-        <ul class="nav nav-pills pull-right">
-            <li ng-repeat="button in navButtons" ng-class="{active: pathIsSelected(button.path)}">
-                <a href="{{navPrefix}}{{button.path}}">{{button.label}}</a>
-            </li>
-        </ul>
-        <h3 class="text-muted">{{appName}}</h3>
+    <div class="header">
+        <h3 class="text-muted">Speech Play</h3>
     </div>
 
     <div ng-view></div>

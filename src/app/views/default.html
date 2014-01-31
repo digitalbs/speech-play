@@ -1,6 +1,6 @@
-<p>{{ speechSupport }}</p>
-<p>Current Step: {{ currentStep }}</p>
-<input ng-model="msg" type="text" placeholder="Write a message"/><br/><br/>
+<form ng-submit="speak()">
+    <input ng-model="msg" type="text" placeholder="Write a message"/>
+    <br/><br/>
+</form>
 <button ng-click="speak()">Say Something</button>
-
-        <button ng-click="record()">Record Something</button>
+<button ng-click="record()">Record Something</button>
