@@ -41,7 +41,6 @@ define([], function () {
         function sayIt (text) {
             var msg = new SpeechSynthesisUtterance();
             var voices = window.speechSynthesis.getVoices();
-            msg.voice = voices[0];
             msg.voiceURI = 'native';
             msg.volume = 1;
             msg.rate = 1;
