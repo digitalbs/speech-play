@@ -45,7 +45,7 @@
     "runnerPort": 9100,
     "colors": true,
     "autoWatch": true,
-    "browsers": ["PhantomJS"],
+    "browsers": ["ChromeCanary"],
     "captureTimeout": 60000,
     "singleRun": false
 }

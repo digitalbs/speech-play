@@ -18,6 +18,8 @@ define(["app/config"], function (appConfig) {
             $scope.speechSupport = "Speech is not supported!";
         }
 
+
+
         $scope.record = function () {
             speech.speak();
         }
