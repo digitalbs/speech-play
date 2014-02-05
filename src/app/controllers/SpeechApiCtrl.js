@@ -10,7 +10,19 @@ define(["app/config"], function (appConfig) {
         var spoken = false;
 
         $scope.appDisplayName = "Speech api";
-        $scope.currentStep = 'test';
+        var currentStep = 0;
+
+        $scope.steps = [
+            {
+                step: 'Step 1'
+            },
+            {
+                step: 'Step 2'
+            },
+            {
+                step: 'Step 3'
+            }
+        ]
 
         if('speechSynthesis' in window) {
             $scope.speechSupport = "Speech is supported!";
@@ -18,7 +30,43 @@ define(["app/config"], function (appConfig) {
             $scope.speechSupport = "Speech is not supported!";
         }
 
+        if(currentStep === 0) {
+            speech.sayText($scope.steps[0].step);
+        }
 
+        $scope.$on('COMMAND', function (evt, msg) {
+            if(currentStep > $scope.steps.length && msg === 'next') {
+                speech.sayText('No more steps');
+                return;
+            } else if (currentStep <= 0 && msg === 'back') {
+                speech.sayText('Cannot go back. This is the first step');
+                return;
+            }
+
+            switch(msg) {
+                case 'next':
+                    currentStep += 1;
+                    break;
+
+                case 'back':
+                    currentStep -= 1;
+                    break;
+
+                case 'repeat':
+                    break;
+
+                case 'start over':
+                    currentStep = 0;
+                    break;
+
+                default:
+                    speech.sayText('Please repeat command');
+                    break;
+            }
+
+            speech.sayText($scope.steps[currentStep].step);
+
+        });
 
         $scope.record = function () {
             speech.speak();

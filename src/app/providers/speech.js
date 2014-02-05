@@ -6,7 +6,7 @@ define([], function () {
      * @class speech
      */
 
-    function speech() {
+    function speech($rootScope) {
         //load recognition code
         var recognizing = false;
         var ignore_onend;
@@ -33,10 +33,7 @@ define([], function () {
                 }
             }
             final_transcript = final_transcript.replace(' ', '');
-
-            console.log(final_transcript);
-            //$rootScope.recipeCommand = final_transcript;
-            sayIt(final_transcript);
+            $rootScope.$broadcast('COMMAND', final_transcript);
 
             final_transcript = '';
         }
